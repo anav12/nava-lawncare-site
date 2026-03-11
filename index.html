@@ -107,9 +107,6 @@
     }
 
     .social-links a{
-      width:34px;
-      height:34px;
-      border-radius:50%;
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -118,6 +115,15 @@
       background:rgba(255,255,255,0.04);
       font-weight:700;
       transition:transform 0.2s ease, background 0.2s ease;
+    }
+
+    .social-pill{
+      height:34px;
+      padding:0 12px;
+      border-radius:999px; /* pill shape */
+      font-size:0.82rem;
+      letter-spacing:0.02em;
+      white-space:nowrap;
     }
 
     .social-links a:hover{
@@ -545,6 +551,10 @@
       }
 
       .social-links{ margin-top:0.35rem; }
+
+      .social-links{
+        flex-wrap: wrap;
+      }
     }
 
     @media (max-width:640px){
@@ -598,8 +608,8 @@
         </nav>
 
         <div class="social-links" aria-label="Social media links">
-          <a href="https://www.instagram.com/navalawnservice/" target="_blank" rel="noopener" title="Instagram">IG</a>
-          <a href="https://www.facebook.com/share/1GkwZwakgb/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">FB</a>
+          <a class="social-pill" href="https://www.instagram.com/navalawnservice/" target="_blank" rel="noopener">Instagram</a>
+          <a class="social-pill" href="https://www.facebook.com/share/1GkwZwakgb/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
     </div>
