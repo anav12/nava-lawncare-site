@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAVA Lawncare | Connect</title>
 
+  <link rel="icon" href="/favicon.ico" sizes="any">
+
+  <style>
+    :root{
+      --green:#2F6B2F;
+      --green-dark:#245424;
+      --text:#1f1f1f;
+      --muted:#5e5e5e;
+      --bg:#0f1410;
+      --card:#ffffff;
+      --shadow:0 12px 30px rgba(0,0,0,0.18);
+      --radius:16px;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(47,107,47,0.35), transparent 60%),
+        radial-gradient(900px 500px at 80% 20%, rgba(47,107,47,0.25), transparent 60%),
+        var(--bg);
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:24px 16px;
+    }
+
+    .wrap{
+      width:min(520px, 100%);
+    }
+
+    .card{
+      background:rgba(255,255,255,0.96);
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero{
+      padding:22px 18px 14px;
+      text-align:center;
+    }
+
+    .logo{
+      width:96px;
+      height:96px;
+      border-radius:999px;
+      background:#fff;
+      border:2px solid rgba(0,0,0,0.08);
+      overflow:hidden;
+      margin:0 auto 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .logo img{
+      width:120%;
+      height:120%;
+      object-fit:cover;
+      display:block;
+    }
+
+    h1{
+      margin:0 0 6px;
+      font-size:1.35rem;
+      letter-spacing:0.2px;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size:0.98rem;
+      line-height:1.35;
+    }
+
+    .buttons{
+      padding:14px 16px 18px;
+      display:grid;
+      gap:12px;
+    }
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 14px;
+      border-radius:14px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.10);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(47,107,47,0.55);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+    }
+
+    .left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .icon{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background: rgba(47,107,47,0.10);
+      border:1px solid rgba(47,107,47,0.25);
+      font-weight:900;
+      color:var(--green);
+      flex: 0 0 auto;
+    }
+
+    .arrow{
+      color: rgba(0,0,0,0.40);
+      font-weight:900;
+    }
+
+    .btn.primary{
+      background: var(--green);
+      color:#fff;
+      border-color: transparent;
+    }
+    .btn.primary .icon{
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.22);
+      color:#fff;
+    }
+    .btn.primary .arrow{ color: rgba(255,255,255,0.75); }
+
+    .footer{
+      padding:0 16px 18px;
+      text-align:center;
+      color: rgba(255,255,255,0.78);
+      font-size:0.86rem;
+      margin-top:10px;
+    }
+
+    .small{
+      font-size:0.86rem;
+      color:var(--muted);
+      padding:0 16px 18px;
+      text-align:center;
+    }
+
+    .small a{ color: var(--green); font-weight:700; }
+
+    @media (max-width:420px){
+      .icon{ width:40px; height:40px; }
+      .btn{ padding:13px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hero">
+        <div class="logo">
+          <!-- Use the same logo you use on the main site -->
+          <img src="./images/logo.PNG" alt="NAVA Lawncare logo">
+        </div>
+        <h1>NAVA Lawncare</h1>
+        <p class="sub">Quick links to our website and social pages.</p>
+      </div>
+
+      <div class="buttons">
+        <a class="btn primary" href="https://navalawncare.com" target="_blank" rel="noopener">
+          <span class="left"><span class="icon">W</span>Visit Website</span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://www.instagram.com/navalawnservice/" target="_blank" rel="noopener">
+          <span class="left"><span class="icon">IG</span>Follow Instagram</span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://www.facebook.com/share/1GkwZwakgb/?mibextid=wwXIfr" target="_blank" rel="noopener">
+          <span class="left"><span class="icon">FB</span>Follow Facebook</span>
+          <span class="arrow">›</span>
+        </a>
+
+        <!-- Replace these two with your real phone + email -->
+        <a class="btn" href="tel:+10000000000">
+          <span class="left"><span class="icon">☎</span>Call / Text</span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="mailto:youremail@example.com">
+          <span class="left"><span class="icon">✉</span>Email</span>
+          <span class="arrow">›</span>
+        </a>
+      </div>
+
+      <div class="small">
+        Or visit <a href="https://navalawncare.com" target="_blank" rel="noopener">navalawncare.com</a>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="year"></span> NAVA Lawncare</div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
